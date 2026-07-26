@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap");
+
+:root {
+  --bg: #0d0e1a;
+  --surface: #171826;
+  --surface-raised: #1e2032;
+  --border: #2a2d45;
+  --accent: #7c6ff0;
+  --accent-dim: #5d52c4;
+  --success: #4ade9a;
+  --success-bg: rgba(74, 222, 154, 0.1);
+  --warn: #f0a857;
+  --warn-bg: rgba(240, 168, 87, 0.1);
+  --text: #e8e6f0;
+  --text-dim: #9a98b3;
+  --text-faint: #5f5d78;
+
+  --font-display: "Spectral", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  background-image: radial-gradient(circle at 20% 0%, rgba(124, 111, 240, 0.06), transparent 50%);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+button:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
